@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>90DF809F-4493-4EC8-BAF1-D4C902CC5E37</string>
+	<key>IDESourceControlProjectName</key>
+	<string>moment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B318B9E1FC4473FBA7705B21F160B9868318DA5D</key>
+		<string>https://github.com/hemanz/moment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>moment.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B318B9E1FC4473FBA7705B21F160B9868318DA5D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hemanz/moment.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B318B9E1FC4473FBA7705B21F160B9868318DA5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B318B9E1FC4473FBA7705B21F160B9868318DA5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>moment</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B318B9E1FC4473FBA7705B21F160B9868318DA5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>moment</string>
+		</dict>
+	</array>
+</dict>
+</plist>
