@@ -49,6 +49,7 @@
     [self loadView1];
     [self loadData];
     [self audio];
+    
 }
 
 - (void) loadView1{
@@ -131,6 +132,7 @@
     [fuctionBgView addSubview:recordButton];
     [voiveButton setImage:[UIImage imageNamed:@"groupsend_voice_selected.png"] forState:UIControlStateNormal];
     flag = 0;
+    [self.avPlay stop];
 
     NSLog(@"voice");
 }
@@ -176,8 +178,37 @@
     switch (flag) {
             
         case 0:
+        {
+            NSLog(@"avdio@@@");
+            NSError* error;
+            NSString *url = [NSString stringWithFormat:@"%@",urlPlay];
+            NSLog(@"********%@",url);
+            NSData *avdioData = [NSData dataWithContentsOfFile:url];
+            NSString *postUrl = @"http://123.57.206.120:8080/radio/sendMessgeForFavors/ios/233333/1.0";
+            NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"1",@"anchorid",@"audio",@"type", nil];
+            [manager POST:postUrl parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
+             {
+                 if (avdioData) {
+                     [formData appendPartWithFileData :avdioData name:@"avdio" fileName:@"lll.aac" mimeType:@"audio/x-aac"];
+                     NSLog(@"wocao?");
+                 }
+                 
+                 
+                 //                [SVProgressHUD showInView:self.view status:@"正在为您合成卡片，请稍等"];
+             } success:^(AFHTTPRequestOperation *operation,id responseObject)
+             {
+                 NSLog(@"success");
+                 [self textClick:textButton];
+                 
+             } failure:^(AFHTTPRequestOperation *operation,NSError *error)
+             {
+                 NSLog(@"error:%@",error);
+             }];
+            
+        
             
             break;
+        }
         case 1:
         {
             NSLog(@"image@@@");
@@ -238,6 +269,19 @@
 #pragma mark 录音
 - (void)btnDown:(UIButton *)sender
 {
+    AVAudioSession * recorder1 = [AVAudioSession sharedInstance];
+    
+    NSError * sessionError;
+    
+    [recorder1 setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
+    
+    if(recorder1 == nil)
+        
+        NSLog(@"Error creating session: %@", [sessionError description]);
+    
+    else
+        
+        [recorder1 setActive:YES error:nil];
     //创建录音文件，准备录音
     if ([recorder prepareToRecord]) {
         //开始
@@ -250,14 +294,20 @@
     [showSecond setTitle:@"0\"" forState:UIControlStateNormal];
 //    [showSecond setImage:[UIImage imageNamed:@"groupsend_showSencond.png"] forState:UIControlStateNormal];
     [fuctionBgView addSubview:showSecond];
+//    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+//    
+//    [audioSession setCategory:AVAudioSessionCategoryRecord  error:nil];
+//    
+//    [audioSession setActive:YES error:nil];
+
     timer = [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(detectionVoice) userInfo:nil repeats:YES];
     recordTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateRecordTime:) userInfo:nil repeats:YES];
 }
 - (void)btnUp:(UIButton *)sender
 {
-    NSTimeInterval cRecorderTime = recorder.currentTime;
-    if (cRecorderTime > 2.0) {//如果录制时间<2 不发送
+        if (recordTime > 2) {//如果录制时间<2 不发送
         NSLog(@"发出去");
+        NSLog(@"%f",recorder.deviceCurrentTime);
         [recordButton setImage:[UIImage imageNamed:@"record_animate_0.png"] forState:UIControlStateNormal];
         [reRecordButton setImage:[UIImage imageNamed:@"groupsend_rerecord.png"] forState:UIControlStateNormal];
         [self removeSubview];
@@ -283,6 +333,7 @@
 - (void)btnDragUp:(UIButton *)sender
 {
     //删除录制文件
+    [showSecond removeFromSuperview];
     [recorder deleteRecording];
     [recorder stop];
     [timer invalidate];
@@ -373,11 +424,15 @@
 
 #pragma mark 播放
 - (void) playRecordSound:(UIButton *) btn{
+    NSLog(@"play");
     if (self.avPlay.playing) {
         [self.avPlay stop];
         return;
     }
     AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:urlPlay error:nil];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+
     self.avPlay = player;
     [self.avPlay play];
 }

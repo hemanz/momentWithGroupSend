@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
-            timestampString = "459338777.805459"
+            timestampString = "459426098.979177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "-btnUp:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,12 +42,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
-            timestampString = "459338779.053866"
+            timestampString = "459426098.979177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "-btnUp:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
+            timestampString = "459426098.979177"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "-btnDragUp:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
