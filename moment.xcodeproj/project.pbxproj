@@ -10,6 +10,11 @@
 		631AF6FF1B5693A9001EF04F /* UserCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 631AF6FE1B5693A9001EF04F /* UserCommentCell.m */; };
 		63572B401B5D4953009E199D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63572B3F1B5D4953009E199D /* AudioToolbox.framework */; };
 		63572B421B5D495D009E199D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63572B411B5D495D009E199D /* AVFoundation.framework */; };
+		D90114CB1B6633D9009BB784 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = D90114BE1B6633D9009BB784 /* amrFileCodec.mm */; };
+		D90114CC1B6633D9009BB784 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = D90114C01B6633D9009BB784 /* wav.mm */; };
+		D90114CD1B6633D9009BB784 /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D90114C21B6633D9009BB784 /* EMVoiceConverter.mm */; };
+		D90114CE1B6633D9009BB784 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90114C61B6633D9009BB784 /* libopencore-amrnb.a */; };
+		D90114CF1B6633D9009BB784 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90114CA1B6633D9009BB784 /* libopencore-amrwb.a */; };
 		D93B24E81B550A5A003DD640 /* TBCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93B24E71B550A5A003DD640 /* TBCell1.xib */; };
 		D97BB0DE1B5C8ACF00AC05E3 /* GroupSendController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97BB0DD1B5C8ACF00AC05E3 /* GroupSendController.m */; };
 		D98F2A1F1B5F8C4C00521A2A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98F2A1E1B5F8C4C00521A2A /* MobileCoreServices.framework */; };
@@ -59,6 +64,18 @@
 		631AF6FE1B5693A9001EF04F /* UserCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCommentCell.m; sourceTree = "<group>"; };
 		63572B3F1B5D4953009E199D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		63572B411B5D495D009E199D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D90114BD1B6633D9009BB784 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		D90114BE1B6633D9009BB784 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		D90114BF1B6633D9009BB784 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		D90114C01B6633D9009BB784 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		D90114C11B6633D9009BB784 /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
+		D90114C21B6633D9009BB784 /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
+		D90114C41B6633D9009BB784 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		D90114C51B6633D9009BB784 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		D90114C61B6633D9009BB784 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		D90114C81B6633D9009BB784 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		D90114C91B6633D9009BB784 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		D90114CA1B6633D9009BB784 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		D93B24E71B550A5A003DD640 /* TBCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBCell1.xib; sourceTree = "<group>"; };
 		D97BB0DC1B5C8ACF00AC05E3 /* GroupSendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSendController.h; sourceTree = "<group>"; };
 		D97BB0DD1B5C8ACF00AC05E3 /* GroupSendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSendController.m; sourceTree = "<group>"; };
@@ -129,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98F2A1F1B5F8C4C00521A2A /* MobileCoreServices.framework in Frameworks */,
+				D90114CF1B6633D9009BB784 /* libopencore-amrwb.a in Frameworks */,
+				D90114CE1B6633D9009BB784 /* libopencore-amrnb.a in Frameworks */,
 				63572B421B5D495D009E199D /* AVFoundation.framework in Frameworks */,
 				63572B401B5D4953009E199D /* AudioToolbox.framework in Frameworks */,
 			);
@@ -144,6 +163,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D90114BB1B6633D9009BB784 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				D90114BC1B6633D9009BB784 /* amrwapper */,
+				D90114C11B6633D9009BB784 /* EMVoiceConverter.h */,
+				D90114C21B6633D9009BB784 /* EMVoiceConverter.mm */,
+				D90114C31B6633D9009BB784 /* opencore-amrnb */,
+				D90114C71B6633D9009BB784 /* opencore-amrwb */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		D90114BC1B6633D9009BB784 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				D90114BD1B6633D9009BB784 /* amrFileCodec.h */,
+				D90114BE1B6633D9009BB784 /* amrFileCodec.mm */,
+				D90114BF1B6633D9009BB784 /* wav.h */,
+				D90114C01B6633D9009BB784 /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		D90114C31B6633D9009BB784 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				D90114C41B6633D9009BB784 /* interf_dec.h */,
+				D90114C51B6633D9009BB784 /* interf_enc.h */,
+				D90114C61B6633D9009BB784 /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		D90114C71B6633D9009BB784 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				D90114C81B6633D9009BB784 /* dec_if.h */,
+				D90114C91B6633D9009BB784 /* if_rom.h */,
+				D90114CA1B6633D9009BB784 /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
 		D98F2AB41B60DA2100521A2A /* UIKit+AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +277,7 @@
 		D9A17F881B538BBD00FDAC59 /* moment */ = {
 			isa = PBXGroup;
 			children = (
+				D90114BB1B6633D9009BB784 /* VoiceConvert */,
 				D9A17FAF1B538BF900FDAC59 /* ZhuBoMomentVC */,
 				D9A17FC11B538BF900FDAC59 /* AppDelegate.h */,
 				D9A17FBB1B538BF900FDAC59 /* AppDelegate.m */,
@@ -387,8 +450,10 @@
 				D97BB0DE1B5C8ACF00AC05E3 /* GroupSendController.m in Sources */,
 				D9A17FC31B538BF900FDAC59 /* NSString+Ext.m in Sources */,
 				D98F2ADF1B60DA2100521A2A /* AFURLSessionManager.m in Sources */,
+				D90114CD1B6633D9009BB784 /* EMVoiceConverter.mm in Sources */,
 				D9A17FCC1B538BF900FDAC59 /* BNRItemCell.m in Sources */,
 				D98F2ADC1B60DA2100521A2A /* AFURLConnectionOperation.m in Sources */,
+				D90114CB1B6633D9009BB784 /* amrFileCodec.mm in Sources */,
 				D98F2AD81B60DA2100521A2A /* AFHTTPRequestOperationManager.m in Sources */,
 				D9A17F8C1B538BBD00FDAC59 /* main.m in Sources */,
 				D98F2AE41B60DA2100521A2A /* UIWebView+AFNetworking.m in Sources */,
@@ -406,6 +471,7 @@
 				D9A17FC21B538BF900FDAC59 /* CommentTableViewController.m in Sources */,
 				D98F2AD91B60DA2100521A2A /* AFHTTPSessionManager.m in Sources */,
 				D9A17FC81B538BF900FDAC59 /* ZhuBoMomentCell.m in Sources */,
+				D90114CC1B6633D9009BB784 /* wav.mm in Sources */,
 				D98F2AE31B60DA2100521A2A /* UIRefreshControl+AFNetworking.m in Sources */,
 				D9A17FCA1B538BF900FDAC59 /* BNRItemViewController.m in Sources */,
 				D98F2AE11B60DA2100521A2A /* UIAlertView+AFNetworking.m in Sources */,
@@ -512,10 +578,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = moment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/moment/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/moment/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -524,10 +597,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = moment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/moment/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/moment/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
