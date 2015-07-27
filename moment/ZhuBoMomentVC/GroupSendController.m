@@ -31,6 +31,7 @@
     UIButton *showSecond;
     UIButton *upLoadPicButton;
     NSData *picImageData;
+    NSData *avdioData;
     
     UITextView *groupSendTextField;
     
@@ -180,25 +181,23 @@
         case 0:
         {
             NSLog(@"avdio@@@");
-            NSError* error;
-            NSString *url = [NSString stringWithFormat:@"%@",urlPlay];
-            NSLog(@"********%@",url);
-            NSData *avdioData = [NSData dataWithContentsOfFile:url];
+            [groupSendButton setTitle:@"群发中..." forState:UIControlStateDisabled];
+            avdioData = [NSData dataWithContentsOfURL:urlPlay];
             NSString *postUrl = @"http://123.57.206.120:8080/radio/sendMessgeForFavors/ios/233333/1.0";
             NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"1",@"anchorid",@"audio",@"type", nil];
             [manager POST:postUrl parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
              {
                  if (avdioData) {
-                     [formData appendPartWithFileData :avdioData name:@"avdio" fileName:@"lll.aac" mimeType:@"audio/x-aac"];
+                     [formData appendPartWithFileData :avdioData name:@"file" fileName:@"lll.aac" mimeType:@"audio/x-aac"];
                      NSLog(@"wocao?");
                  }
                  
                  
                  //                [SVProgressHUD showInView:self.view status:@"正在为您合成卡片，请稍等"];
-             } success:^(AFHTTPRequestOperation *operation,id responseObject)
+            } success:^(AFHTTPRequestOperation *operation,id responseObject)
              {
                  NSLog(@"success");
-                 [self textClick:textButton];
+                 [self textClick:voiveButton];
                  
              } failure:^(AFHTTPRequestOperation *operation,NSError *error)
              {
@@ -217,12 +216,11 @@
             [manager POST:postUrl parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
              {
                  [formData appendPartWithFileData :picImageData name:@"file" fileName:@"11.png" mimeType:@"image/jpg"];
- 
                  //                [SVProgressHUD showInView:self.view status:@"正在为您合成卡片，请稍等"];
              } success:^(AFHTTPRequestOperation *operation,id responseObject)
              {
                  NSLog(@"success");
-                 [self textClick:textButton];
+                 [self textClick:imageButton];
                  
              } failure:^(AFHTTPRequestOperation *operation,NSError *error)
              {
@@ -430,6 +428,7 @@
         return;
     }
     AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:urlPlay error:nil];
+    NSLog(@"play's URL:%@",urlPlay);
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
 

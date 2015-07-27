@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
-            timestampString = "459426098.979177"
+            timestampString = "459668634.664575"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "-btnUp:"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "-groupSendClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,28 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
-            timestampString = "459426098.979177"
+            timestampString = "459668634.664575"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "-btnUp:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moment/ZhuBoMomentVC/GroupSendController.m"
-            timestampString = "459426098.979177"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
-            landmarkName = "-btnDragUp:"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "-groupSendClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
