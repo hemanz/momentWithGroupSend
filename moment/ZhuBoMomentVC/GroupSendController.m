@@ -360,6 +360,14 @@
     
     NSError *error;
     //初始化
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *setCategoryError = nil;
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&setCategoryError];
+    
+    if(setCategoryError){
+        NSLog(@"%@", [setCategoryError description]);
+    }
+
     recorder = [[AVAudioRecorder alloc]initWithURL:url settings:recordSetting error:&error];
     //开启音量检测
     recorder.meteringEnabled = YES;

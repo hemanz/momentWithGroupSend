@@ -34,3 +34,14 @@ void D_IF_exit(void* state);
 #endif
 
 #endif
+
+[self addimage:[UIImage imageNamed:@"导航_back"] title:nil selector:@selector(backClick) location:YES ];
+
+-(void)backClick{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+
+
+
